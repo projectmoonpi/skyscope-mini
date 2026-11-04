@@ -81,7 +81,7 @@ bool fetch(Snapshot& out) {
     strlcpy(out.error, "Can't reach adsb.fi", sizeof out.error);
     return false;
   }
-  http.setUserAgent("SkyScope-Mini/1.0 (+https://github.com/ricsne2010/skyscope-mini)");
+  http.setUserAgent("SkyScope-Mini/1.0 (+https://github.com/projectmoonpi/skyscope-mini)");
   const int code = http.GET();
   if (code != 200) {
     snprintf(out.error, sizeof out.error, "adsb.fi answered %d", code);
@@ -106,7 +106,7 @@ void lookUpElevation() {
   HTTPClient http;
   http.setTimeout(8000);
   if (!http.begin(client, url)) return;
-  http.setUserAgent("SkyScope-Mini (+https://github.com/ricsne2010/skyscope-mini)");
+  http.setUserAgent("SkyScope-Mini (+https://github.com/projectmoonpi/skyscope-mini)");
   if (http.GET() == 200) {
     JsonDocument doc;
     if (!deserializeJson(doc, http.getString()) && doc["elevation"][0].is<float>()) {

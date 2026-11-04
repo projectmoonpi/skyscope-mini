@@ -152,11 +152,11 @@ void handleRoot() {
     p += checkbox((String("a") + i).c_str(), label, !(settings.hiddenAlts & (1 << i)));
   }
   p += F("</div></section><button>Save</button></form>");
-  p += F("<section><h2>About</h2><p>SkyScope Mini is a standalone version of <a href='https://github.com/ricsne2010/skyscope'>SkyScope</a> "
+  p += F("<section><h2>About</h2><p>SkyScope Mini is a standalone version of <a href='https://github.com/projectmoonpi/skyscope'>SkyScope</a> "
          "for a 4.3-inch ESP32-S3 display: live aircraft from adsb.fi (up to 150, within 100 km / 50 mi), silhouettes, the sweep, "
          "filters, emergency alerts and major-airport runways.</p><p class=dim>Version " SKYSCOPE_MINI_VERSION " &middot; ");
   p += esc(String(g_mdnsName) + ".local (" + device::address() + ")");
-  p += F("</p><p><a href='https://github.com/ricsne2010/skyscope-mini'>github.com/ricsne2010/skyscope-mini</a></p>"
+  p += F("</p><p><a href='https://github.com/projectmoonpi/skyscope-mini'>github.com/projectmoonpi/skyscope-mini</a></p>"
          "<p class=dim>Hold the BOOT button for 3 seconds to set up Wi-Fi again (10 seconds restores the default display wiring). Board wired differently? <a href='/hardware'>Display hardware (pins)</a>. Aircraft data: adsb.fi. Ground elevation: Open-Meteo (CC BY 4.0). Grew out of "
          "ESP32-Plane-Radar by MatixYo (MIT). Not for navigation.</p></section></main></body></html>");
   server.send(200, "text/html", p);

@@ -7,14 +7,14 @@
 
 The Mini joins your Wi-Fi, fetches live aircraft from [adsb.fi](https://adsb.fi)'s
 open data every five seconds, and draws them on an ATC-style scope with a
-sweeping beam. It's a reduced [SkyScope](https://github.com/ricsne2010/skyscope)
+sweeping beam. It's a reduced [SkyScope](https://github.com/projectmoonpi/skyscope)
 sized for a microcontroller.
 
 ![Mini screen: Phoenix Sky Harbor at 25 miles, colour by kind](docs/images/screen.png)
 
 > **Early release.** 1.1.3 builds cleanly and its screen has been checked with
 > the same drawing code running on a computer (the picture above), but it has not
-> yet been run on the board itself. Please [open an issue](https://github.com/ricsne2010/skyscope-mini/issues)
+> yet been run on the board itself. Please [open an issue](https://github.com/projectmoonpi/skyscope-mini/issues)
 > if something doesn't work.
 
 ## Documentation
@@ -35,8 +35,8 @@ sized for a microcontroller.
 - Settings page at `http://skyscope-mini.local`
 
 For the full feature set (airspace, SIDs/STARs, photos, logos, your own SDR),
-run [SkyScope](https://github.com/ricsne2010/skyscope) on a Pi and add a
-[SkyScope Satellite](https://github.com/ricsne2010/skyscope-satellite) display.
+run [SkyScope](https://github.com/projectmoonpi/skyscope) on a Pi and add a
+[SkyScope Satellite](https://github.com/projectmoonpi/skyscope-satellite) display.
 
 ## What you need
 
@@ -45,12 +45,12 @@ run [SkyScope](https://github.com/ricsne2010/skyscope) on a Pi and add a
 | Display | **Sunton ESP32-8048S043**: ESP32-S3 (16 MB flash, 8 MB PSRAM), 4.3″ 800×480, GT911 capacitive touch |
 | Cable and power | USB-C data cable; any 5 V USB supply of 1 A or more |
 | Network | 2.4 GHz Wi-Fi with internet access |
-| Case (optional) | The 3D-printable radar-console desk case in [skyscope-satellite/case](https://github.com/ricsne2010/skyscope-satellite/tree/main/case) fits the Mini too |
+| Case (optional) | The 3D-printable radar-console desk case in [skyscope-satellite/case](https://github.com/projectmoonpi/skyscope-satellite/tree/main/case) fits the Mini too |
 
 ## Install
 
 **From a browser (no tools needed):** download `skyscope-mini-1.1.3.bin` from the
-[latest release](https://github.com/ricsne2010/skyscope-mini/releases/latest),
+[latest release](https://github.com/projectmoonpi/skyscope-mini/releases/latest),
 open the [ESP web flasher](https://espressif.github.io/esptool-js/) in Chrome or
 Edge, connect to the board, and program the file at address **0x0**. If no port
 shows up, hold **BOOT**, tap **RST**, release BOOT and connect again.
@@ -58,7 +58,7 @@ shows up, hold **BOOT**, tap **RST**, release BOOT and connect again.
 **From source with [PlatformIO](https://platformio.org):**
 
 ```sh
-git clone https://github.com/ricsne2010/skyscope-mini.git
+git clone https://github.com/projectmoonpi/skyscope-mini.git
 cd skyscope-mini
 pio run -t upload
 ```

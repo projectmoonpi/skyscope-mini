@@ -3,7 +3,7 @@
 # SkyScope Mini
 
 **A small standalone aircraft radar on a 4.3″ ESP32-S3 display. No Raspberry Pi needed.**
-**Designed and Created by Project Moon Pi**
+**Designed and Created by Project Moon Pi** · [www.projectmoonpi.com](https://www.projectmoonpi.com/skyscope/) · Help: [support@projectmoonpi.com](mailto:support@projectmoonpi.com)
 
 The Mini joins your Wi-Fi, fetches live aircraft from [adsb.fi](https://adsb.fi)'s
 open data every five seconds, and draws them on an ATC-style scope with a
@@ -14,8 +14,8 @@ sized for a microcontroller.
 
 > **Early release.** 1.1.3 builds cleanly and its screen has been checked with
 > the same drawing code running on a computer (the picture above), but it has not
-> yet been run on the board itself. Please [open an issue](https://github.com/projectmoonpi/skyscope-mini/issues)
-> if something doesn't work.
+> yet been run on the board itself. If something doesn't work, please email
+> [support@projectmoonpi.com](mailto:support@projectmoonpi.com) or [open an issue](https://github.com/projectmoonpi/skyscope-mini/issues).
 
 ## Documentation
 
@@ -50,7 +50,7 @@ run [SkyScope](https://github.com/projectmoonpi/skyscope) on a Pi and add a
 ## Install
 
 **From a browser (no tools needed):** download `skyscope-mini-1.1.3.bin` from the
-[latest release](https://github.com/projectmoonpi/skyscope-mini/releases/latest),
+[latest release](https://github.com/projectmoonpi/skyscope-mini/releases/latest) (also on [www.projectmoonpi.com/downloads](https://www.projectmoonpi.com/downloads/#skyscope)),
 open the [ESP web flasher](https://espressif.github.io/esptool-js/) in Chrome or
 Edge, connect to the board, and program the file at address **0x0**. If no port
 shows up, hold **BOOT**, tap **RST**, release BOOT and connect again.
@@ -101,6 +101,14 @@ defaults*, to go back to the ESP32-8048S043 wiring.
 | `include/shapes.h` | Aircraft silhouettes, generated from SkyScope by `tools/gen_shapes.py` |
 | `src/data/` | Major-airport runways from OurAirports (`tools/build_large_airports.py`) |
 | `tools/preview/` | Builds the drawing code on a computer and renders a frame to an image |
+
+## Help and support
+
+* **Help** installing or using the Mini, or a bug to report: email **[support@projectmoonpi.com](mailto:support@projectmoonpi.com)**
+  (a photo of the screen and the board's back helps), or see the [support page](https://www.projectmoonpi.com/support/). You can also
+  open an [issue on GitHub](https://github.com/projectmoonpi/skyscope-mini/issues).
+* **Anything else** (business, partnerships, the press): **[sales@projectmoonpi.com](mailto:sales@projectmoonpi.com)**.
+* Website: **[www.projectmoonpi.com](https://www.projectmoonpi.com)**
 
 ## Credits and licence
 
